@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  border-bottom: 1px solid #ebebf1;
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.05);
+  padding: 20px 137px 20px 135px;
+  font-size: 14px;
+  gap: 60px;
+}
+
+.navbar hr {
+  display: none;
+}
+
+.navbar__icons-bar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-icon {
+  display: none;
+}
+
+.input-wrapper {
+  display: flex;
+  width: 100%;
+  border: 1px solid #ebebf1;
+  align-items: center;
+  padding: 12px 14px;
+  gap: 4px;
+  border-radius: 5px;
+}
+
+input {
+  border: none;
+  width: 100%;
+  padding: 5px;
+}
+
+::-webkit-input-placeholder {
+  color: #bbc4d6;
+}
+
+::-moz-placeholder {
+  color: #bbc4d6;
+}
+
+:-ms-input-placeholder {
+  color: #bbc4d6;
+}
+
+:-moz-placeholder {
+  color: #bbc4d6;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  border-left: 1px solid #ebebf1;
+  margin: -20px 0;
+  padding-left: 9px;
+}
+
+.profile__name {
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.profile__img {
+  width: 40px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.cards {
+  padding: 70px 135px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.cards__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card {
+  cursor: pointer;
+  border: 1px solid #ebebf1;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  width: calc((100% - 90px) / 4);
+}
+
+.card > img {
+  max-width: 87%;
+  max-height: 64px;
+}
+
+@media screen and (max-width: 1279px) {
+  .navbar {
+    padding: 20px;
+  }
+
+  .cards {
+    padding: 70px 20px;
+  }
+
+  .cards__list {
+    gap: 20px;
+  }
+
+  .card {
+    width: calc((100% - 40px) / 3);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navbar {
+    height: 105px;
+    flex-direction: column;
+    gap: 0;
+    padding-top: 17px;
+    padding-bottom: 13px;
+  }
+
+  .navbar hr {
+    display: block;
+    margin: 0px -20px;
+    border: none;
+    border-top: 1px solid;
+    border-color: rgba(187, 196, 214, 0.5);
+  }
+
+  .input-wrapper {
+    padding: 0;
+    border: none;
+  }
+
+  .profile-icon {
+    display: block;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .profile {
+    display: none;
+  }
+}
